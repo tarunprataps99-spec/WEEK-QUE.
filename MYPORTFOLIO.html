@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPS-portfolio</title>
+    <style> body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+
+}
+body{
+    background-color: rgb(0, 0, 33);
+    color: white;
+}
+nav { display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 30px;
+    background-color: rgb(18, 18, 62);
+
+}
+nav ul{
+    justify-content: center;
+    display: flex;
+}
+nav ul li{
+    list-style: none;
+    margin: 0 20px;
+    color: rgb(136, 12, 12);
+}
+    .left{
+        font-size: 1.5rem;
+    }
+    .firstsection{
+        display: flex;
+        justify-content: space-around;
+        font-weight: bold;
+
+    }
+    .firstsection div{
+    
+    }
+    .leftsection{
+        width: 30%;
+        font-size: 2rem;
+        margin:200px 0;
+    }
+    .rightsection{
+        margin: 50px 0;
+        width: 30%;
+        height: 70%; 
+        
+    }
+    .purple{
+        color: rgb(255, 0, 255);
+    }
+    #element{
+        color: rgb(8, 222, 158);
+    }
+    .secondsection{
+        text-align: center;
+        margin: 50px 0;
+        color: rgb(5, 117, 117);
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .secondsection .box {
+    background: white;
+    width: 80vw;
+    height: 2px;
+    margin: 56px 0;
+    display: flex
+}
+.secondsection .verticle {
+    background: white;
+    width: 1px;
+    height: 95px;
+    margin: 0 100px;
+}
+ </style>
+
+</head>
+<body>
+     <header>
+           <nav>
+             <div class="left"> TPS's Portfolio</div>
+             <div class="right"></div>
+             <ul>
+               <li><a href="#about">About</a></li>
+               <li><a href="#contact">Contact</a></li>
+               <li><a href="#projects">Projects</a></li>
+             </ul>
+          </nav>
+     </header>
+     <main>
+            <section class="firstsection">
+                <div class="leftsection">Hi, My name is <span class="purple"> Tarun Pratap Singh</span>  
+                    <div>I am pusuing B.tech in computer science from INVERTIS UNIVERSITY BREILLY</div>
+                    <div> And i am a web developer</div>
+                    <span id="element"></span>
+                </div>
+                <div class="rightsection"> <img src="./image/images (2).jpg" alt="my image" width="400" height="500"></div>
+                
+            </section>
+            <hr>
+            <section class="secondsection">
+                    <h1>Experience</h1>
+                    <p>I have experience in web development, including HTML, CSS, and JavaScript.</p>
+                    <P> Java programming language</P>
+            </section>
+     </main>
+     <!-- Load library from the CDN -->
+  <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Web Developer', 'Student', 'Part time cricket player'],
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true
+    });
+  </script>
+
+</body>
+</html>

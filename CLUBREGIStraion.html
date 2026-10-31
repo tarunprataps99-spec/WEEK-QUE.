@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLUB REGISTRATION</title>
+</head>
+<body>
+    <sectio class="one">
+            <a href="#EVENT">EVENT</a>
+            <a href="#Register">Register</a>
+            <h1>CODING CLUB</h1>
+            <h2>UPCOMING EVENT</h2>
+            <table border="2px">
+                 <caption>CLUB EVENT</caption>
+                 <tr>
+                    <th>EVENT</th>
+                    <th>DATE</th>
+                    <th>VENUE</th>
+                 </tr>
+                 <tr>
+                    <td>HTML WORKSHOP</td>
+                    <td>12 NOv</td>
+                    <td> LAB 1</td> 
+                 </tr>           
+                 <tr>
+                    <td>HACATHON</td>
+                    <td>20 Nov</td>
+                    <td>SEMINAR HALL</td>
+                 </tr>
+            </table>
+            <h2>REGISTER</h2>
+    <form>
+         <label> Name:</label>
+            <input type="text" id="name" name="username" placeholder="Enter your name">
+            <br><br>
+         <label type="for dob"> DoB:</label>
+            <input type="date" id="dob" name="dob" required>
+            <br><br>
+         <label for="phone"> Phone number </label>
+            <input type="tel" id=" phone" name="phone number " required>
+            <br><br>
+         <label>Email:</label>
+            <input type="Email" placeholder="Enter you email">
+            <br><br>
+         <div> GENDER</div>
+         <label> 
+               <input type="radio" name="gender" value="male" required > Male
+               <input type="radio" name="gender" value="female" required>Female
+               <input type="radio" name="gender" value="other" required>Other
+         </label>
+                <br><br>
+         <label> <span> INTEREST</span>
+                <input type="checkbox" name="skills" value="c" required > WEB
+                <input type="checkbox" name="skills" value="cpp" required > DSA
+         </label>
+            <br><br>
+        <label for="branch"> BRANCH: </label>
+            <select id=" branch" name="branch"> 
+                <option value="" disabled selected> Select ur option </option>
+                <option value="bca">BCA</option>
+                <option value="b.tech">B.tech CSE</option>
+                <option value="b.techai">B.tech AI</option>
+                <option value=" bba">BBA</option>
+                   
+            </select>
+            <br><br>
+            <label for="DESCRIPTION"> WHY DO YOU WANT To JOIN</label>
+                    <textarea id="DICR." name="DISCRIP." rows="5" cols="15"></textarea>
+            <br><br>
+         <label> Password:</label>
+            <input type="password" placeholder="Enter your password">
+         <br>
+         <button type="reset"> Register</button>
+
+     </form>
+    
+</body>
+</html>

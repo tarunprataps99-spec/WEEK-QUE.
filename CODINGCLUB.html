@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coding club</title>
+</head>
+<style>
+    body{
+        background-color: antiquewhite;
+    }
+    nav{
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        background-color: blue;
+        padding: 20px;
+        height: 50px;
+        width: 30%;
+        border-radius: 10px;
+    }
+    .left{
+        font-size:60px;
+        color: white;
+    }
+    section{
+        background-color: white;
+        margin-top: 1%;
+        width: 33%;
+        border-radius: 10px;
+    }
+    .first section{
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+    }
+
+    .list{
+        display: flex;
+        justify-content: baseline;
+        background-color: rgb(52, 87, 243);
+        list-style: none;
+        margin: 0 auto;
+        font-weight:bold;
+    }
+    .data{
+        display: flex;
+        justify-content: baseline;
+        list-style-type:none;
+        margin: 0 auto;
+    }
+    .seconddata{
+        display:flex;
+        justify-content: baseline;
+        list-style: none;
+        margin: 0 auto;
+    }
+    hr{
+        margin: 5px 30px;
+    }
+    li{
+        margin: 0 100px;
+    } 
+    .one{
+        margin: 0;
+    }
+    .faah {
+        margin: 3px 4 px;
+    }
+    .register{
+        font-weight: bold;
+        font-size: 30px;
+        margin: 2%;
+    }
+    form{
+        margin:2%;
+    }
+    button{
+        background-color: blue;
+        outline-style: calc();
+        border-radius: 30px;
+    }
+    @media(min-width:500px) { 
+        .section{
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        }
+
+    }
+    
+@media (min-width: 500px) and (max-width:1159px){
+    .section{
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr ;
+    }
+
+</style>
+<body>
+    <header>
+           <nav>
+                <div class="left">Coding Club</div>
+                <br>
+                <div class="right"> Lean.Build.Share</div>
+
+                </div>
+           </nav>
+    </header>
+    <main>
+          <section class="first section"> 
+                    <h2 class="faah"> UPCOMING EVENTS</h2>
+                    <ul class="list">
+                        <li class="one">Event</li>
+                        <li>Date</li>
+                        <li>venue</li>
+                    </ul>
+                    <ul class="data">
+                        <li class="one"> HTML Workshop</li>
+                        <li> 12 Nov</li>
+                        <li> Lab 1</li>
+                    </ul>
+                    <hr>
+                    <ul class="seconddata">
+                        <li class="one"> Hacathon</li>
+                        <li>20  Nov </li>
+                        <li> Seminar hall</li>
+                    </ul>
+                    <hr>
+          </section>
+          <section class="second section">
+                    <div class=" register"> Register</div>
+                  <form>
+                        <label> Name </label>
+                        <input type="text" id="name" name="username" placeholder="Enter your name">
+                        <br><br>
+                        <label> Email</label>
+                        <input type="text" id="name" name="username" placeholder="you@example.com">
+                        <br>
+                        <button> Register</button>
+                  </form>
+          </section>
+    </main>
+</body>
+</html>

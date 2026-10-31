@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY Resume  </title>
+    <!-- FontAwesome for Icons -->
+    <style>
+ :root {
+            --primary-blue: #19426b;
+            --line-blue: #a3c2df;
+            --text-dark: #333333;
+            --text-light: #555555;
+            --font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        body {
+            font-family: var(--font-family);
+            color: var(--text-dark);
+            line-height: 1.4;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* For screen view */
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a:hover,
+        a:focus {
+            text-decoration: underline;
+            color: var(--primary-blue);
+        }
+
+        /* Container setup */
+        .resume-container {
+            width: 210mm; /* A4 width */
+            min-height: 297mm;
+            margin: 20px auto;
+            background: #ffffff;
+            padding: 40px 50px;
+            box-sizing: border-box;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Headings & Text */
+        h1, h2, h3, h4, p, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            padding-left: 18px;
+        }
+
+        li {
+            margin-bottom: 4px;
+            font-size: 13.5px;
+        }
+
+        /* Header Section */
+        .header {
+            border-bottom: 2px solid var(--primary-blue);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            color: var(--primary-blue);
+            font-weight: 700;
+            margin-bottom: 5px;
+            letter-spacing: 0.5px;
+        }
+
+        .header .subtitle {
+            font-size: 15px;
+            color: var(--primary-blue);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 13px;
+            color: var(--text-dark);
+            align-items: center;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .contact-info i {
+            color: var(--primary-blue);
+            font-size: 14px;
+        }
+
+        .contact-info .separator {
+            color: var(--line-blue);
+            font-weight: bold;
+            margin: 0 5px;
+        }
+
+        /* Section Titles */
+        .section-title {
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            color: var(--primary-blue);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-top: 22px;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .section-title::after {
+            content: "";
+            flex-grow: 1;
+            height: 1.5px;
+            background-color: var(--line-blue);
+            margin-left: 15px;
+        }
+
+        /* General Text */
+        p {
+            font-size: 13.5px;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        /* Education Section */
+        .education-item {
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--line-blue);
+        }
+        
+        /* Remove border from last education item if needed, but image shows it */
+        .education-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        .edu-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--primary-blue);
+            margin-bottom: 4px;
+        }
+
+        .edu-details {
+            font-size: 13.5px;
+            color: var(--text-dark);
+            margin-bottom: 2px;
+        }
+
+        /* Technical Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .skill-col {
+            border-right: 1px solid var(--line-blue);
+            padding-right: 10px;
+        }
+
+        .skill-col:last-child {
+            border-right: none;
+            padding-right: 0;
+        }
+
+        .skill-col h4 {
+            font-size: 13.5px;
+            color: var(--primary-blue);
+            margin-bottom: 8px;
+        }
+
+        .skill-col ul {
+            padding-left: 15px;
+        }
+
+        .skill-col li {
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+
+        /* Projects Section */
+        .project-item {
+            margin-bottom: 12px;
+        }
+
+        .project-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 5px;
+        }
+
+        /* Soft Skills Section */
+        .soft-skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+        .soft-skills-grid li {
+            font-size: 13.5px;
+            margin-bottom: 5px;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background-color: #ffffff;
+                margin: 0;
+                padding: 0;
+            }
+            .resume-container {
+                width: 100%;
+                margin: 0;
+                padding: 20px 30px;
+                box-shadow: none;
+                min-height: auto;
+            }
+            /* Ensure background colors and borders print correctly */
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="resume-container">
+        
+        <!-- HEADER -->
+        <header class="header">
+            <h1>Tarun Pratap Singh</h1>
+            <div class="subtitle">B.Tech First-Year Student | Computer Science Engineering</div>
+            
+            <div class="contact-info">
+                <span><i class="fas fa-phone-alt"></i><a href="tel:+919389266320">+91-9389266320</a></span>
+                <span class="separator">|</span>
+                <span><i class="fas fa-envelope"></i><a href="mailto:tarunprataps99@gmail.com">tarunprataps99@gmail.com</a></span>
+                <span class="separator">|</span>
+                <span><i class="fas fa-map-marker-alt"></i><a href="https://maps.google.com/?q=Bisauli%2C+Uttar+Pradesh" target="_blank" rel="noreferrer">Bisauli, Uttar Pradesh</a></span>
+            </div>
+            <div class="contact-info" style="margin-top: 8px;">
+                <span><i class="fab fa-github"></i><a href="https://github.com/tarunprataps99-spec" target="_blank" rel="noreferrer">github.com/tarunprataps99-spec</a></span>
+                <span class="separator">|</span>
+                <span><i class="fas fa-code"></i><a href="https://leetcode.com/u/Tarun2293" target="_blank" rel="noreferrer">leetcode.com/u/Tarun2293</a></span>
+                <span class="separator">|</span>
+                <span><i class="fab fa-linkedin"></i><a href="https://linkedin.com/in/Tarun%20Pratap%20Singh" target="_blank" rel="noreferrer">linkedin.com/in/Tarun Pratap Singh</a></span>
+            </div>
+        </header>
+
+        <!-- CAREER OBJECTIVE -->
+        <section>
+            <h2 class="section-title">Career Objective</h2>
+            <p>Motivated first-year B.Tech student eager to learn programming, develop problem-solving skills, and build practical projects. Interested in exploring new technologies and improving technical knowledge.</p>
+        </section>
+
+        <!-- EDUCATION -->
+        <section>
+            <h2 class="section-title">Education</h2>
+            
+            <div class="education-item">
+                <div class="edu-header">
+                    <span>Bachelor of Technology (B.Tech) – Computer Science Engineering</span>
+                    <span>2026 – 2030</span>
+                </div>
+                <div class="edu-details">INVERTIS UNIVERSITY</div>
+                <div class="edu-details" style="display: flex; justify-content: space-between;">
+                    <span>Current Year: First Year</span>
+                    <span>(Expected Graduation)</span>
+                </div>
+            </div>
+
+            <div class="education-item">
+                <div class="edu-header">
+                    <span>Class XII (12th)</span>
+                    <span>2025</span>
+                </div>
+                <div class="edu-details">PT. BHAGWANDAS MEMO. INTER COLLEGE RUDAIN DIST.BUDAUN | UP Board</div>
+                <div class="edu-details">Percentage: 82%</div>
+            </div>
+
+            <div class="education-item">
+                <div class="edu-header">
+                    <span>Class X (10th)</span>
+                    <span>2023</span>
+                </div>
+                <div class="edu-details">PT. BHAGWANDAS MEMO. INTER COLLEGE RUDAIN DIST.BUDAUN | UP Board</div>
+                <div class="edu-details">Percentage: 89%</div>
+            </div>
+        </section>
+
+        <!-- TECHNICAL SKILLS -->
+        <section>
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-col">
+                    <h4>Programming Languages</h4>
+                    <ul>
+                        <li> Java </li>
+                    </ul>
+                </div>
+                <div class="skill-col">
+                    <h4>Web Technologies</h4>
+                    <ul>
+                        <li>HTML, CSS, JAVA SCRIPT </li>
+                    </ul>
+                </div>
+                <div class="skill-col">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li>Git, GitHub, VS Code </li>
+                    </ul>
+                </div>
+                <div class="skill-col">
+                    <h4>Core Skills</h4>
+                    <ul>
+                        <li>Problem-Solving</li>
+                        <li>Logical Thinking</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section>
+            <h2 class="section-title">Projects</h2>
+            <div class="project-item">
+                <div class="project-title">Project Name – Personal/Academic Project</div>
+                <ul>
+                    <li>Java based problem in loop and array.</li>
+                    <li>Web page of invertis university.</li>
+                    <li>Solving problems of Java operators.</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- ACHIEVEMENTS -->
+        <section>
+            <h2 class="section-title">Achievements</h2>
+            <ul>
+                <li>Academic achievements, coding contest participation.</li>
+                <li>Relevant coding milestones or competition results.</li>
+            </ul>
+        </section>
+
+        <!-- SOFT SKILLS -->
+        <section>
+            <h2 class="section-title">Soft Skills</h2>
+            <div class="soft-skills-grid">
+                <ul>
+                    <li>Communication</li>
+                </ul>
+                <ul>
+                    <li>Teamwork</li>
+                </ul>
+                <ul>
+                    <li>Time Management</li>
+                </ul>
+                <ul>
+                    <li>Willingness to Learn</li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>

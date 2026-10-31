@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Lab</title>
+    <style>
+        nav{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            height: 30px;
+            background-color: rgb(1, 1, 51);
+            color: aliceblue;
+
+        }
+        .left{
+            text-align: center;
+            font-size: 40px;
+            margin-right: auto;
+        }
+        nav ul{
+            display: flex;
+        }
+        nav ul li{
+            justify-content: space-around;
+            display: flex;
+            list-style: none;
+            margin:0 30px;
+            color: brown;
+        }
+        .firstsection{
+            
+                justify-content: center;
+                background-color: rgb(47, 87, 247);
+                padding: 50px;
+
+
+        }
+        button{
+            background-color: rgb(240, 119, 6);
+            border-radius: 10px;
+        }
+        .one{
+            display: flex;
+            justify-content: center;
+            color: aliceblue;
+            font-weight: bold;
+            font-size: 40px;
+            margin: 2px;
+        }
+        .two{
+            display: flex;
+            justify-content: center;
+        }
+       .three{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        .secondsection{
+            background-color: aliceblue;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            gap:16px;
+            flex-wrap: wrap;
+        }
+        .card{
+            background-color: aqua;
+            border-radius: 10px;
+            padding: 24px 20px;
+            text-align: center;
+            flex: 1;
+            min-width: 180px;
+            max-width: 240px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+             <div class="left"> Codelab</div>
+             <ul>
+                <li>Home</li>
+                <li>courses</li>
+                <li>Contact</li>
+                <button class="right"> sign up</button>
+             </ul>
+        </nav>
+        <section class="firstsection">
+            <div class="one"> Learn Web Development</div>
+            <div class="two"> Start from Zero. Build real project</div>
+        </section>
+        <section class="secondsection">
+            <div class="card">
+                <h3>HTML</h3>
+                <p>Build the structure</p>
+            </div>
+            <div class="card">
+                    <h3>CSS</h3>
+                    <p>Make it beautiful</p>
+            </div>
+            <div class="card">
+                <h3>Java Script</h3>
+                <p> Make it smart</p>
+            </div>
+            <div class="card"> 
+                <h3>Git</h3>
+                <p> Save your Work</p>
+            </div>
+        </section>
+    </header>
+    
+</body>
+</html>
